@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>The Basic Language of the Web:HTML</title>
+    <link rel="stylesheet" href="Style.CSs">
+  </head>
+
+  <body>
+
+    <header class="main-header!"> <!-- in our case the main title (h1) and the Navigation bar
+      is the main part of the index page, and the remainder of the site
+      is all paragraph and smaller titles h2,h3,h4 etc. 
+      by putting the main title (h1) and the (nav) we are once more sepearting
+      the title and navigation bar into an invisible box from the rest of the page. 
+      -->
+
+     <h1>📘 The Code Magazine</h1>
+       <nav> <!-- Nav is a container element which will put for example in tis case
+       all of the following link into a invisible box meaning they are all grouped together
+       this will be important for CCS-->
+         <a href="blog.html"> Blog</a>
+         <a href="#"> Challenges </a>
+         <a href="#">Flexbox </a>
+         <a href="#">CSS Grid</a>
+       </nav>
+\
+
+    <article> <!-- Another container element used is article
+      this is because the rest of our page is a blogpost so we cant put it all
+      in a container  
+     <article> element use for content that makes sense on its own like blogs,post and news
+     Div> element used as a container for styling and grouping purposes that do not have semantic meaning
+     Semantic meaning ==> HTML element used clearly defines the information and content they contain.
+     Now our page is fully simplified, we have a header and an article
+     -->
+      <header> <!-- here again
+        1-for article we can also make another header
+        2- this is all subjective, meaning someone lese may not like to do it this way
+        3- but because the (h2) + Laura Img + HTML Img all part of the header
+        
+        -->
+       <h2>The Basic Language of the Web: HTML</h2>
+
+         <img
+         src="img/laura-jones.jpg"
+         alt="Laura Jones photo"
+         width="100px"
+         height="100px"
+         />
+
+      
+       <p id="author">Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027</p>
+      
+        <img 
+       src="img/post-img.jpg" 
+       alt="HTML code" 
+       width="500" 
+       />
+
+    </header>
+
+    <p>
+      All modern websites and web applications are built using three fundamental
+      technologies: HTML, CSS and JavaScript. These are the languages of the
+      web. In this post, let's focus on HTML. We will learn what HTML is all
+      about, and why you too should learn it.
+    </p>
+
+    <h3>What is HTML?</h3>
+    <p>
+      HTML stands for <strong>H</strong>yper<strong>T</strong>ext
+      <strong>M</strong>arkup <strong>L</strong>anguage It's a markup language
+      that web developers use to structure and describe the content of a webpage
+      (not a programming language). HTML consists of elements that describe
+      different types of content: paragraphs, links, headings, images, video,
+      etc. Web browsers understand HTML and render HTML code as websites. In
+      HTML, each element is made up of 3 parts:
+    </p>
+    <ol>
+      <li>The opening tag</li>
+      <li>The closing tag</li>
+      <li>The actual element</li>
+    </ol>
+    <p>
+      You can learn more at
+      <a 
+      href="https://google.com"
+      target="_blank"
+
+      />MDN Web Docs</a>
+    </p>
+
+    <h3>Why should you learn HTML?</h3>
+    <p>
+      There are countless reasons for learning the fundamental language of the
+      web. Here are 5 of them:
+    </p>
+    <ul>
+      <li>To be able to use the fundamental web dev language</li>
+      <li>
+        To hand-craft beautiful websites instead of relying on tools like
+        Worpress or Wix
+      </li>
+      <li>To build web applications</li>
+      <li>To impress friends</li>
+      <li>To have fun 😃</li>
+    </ul>
+    
+    <article/> <!-- this section is for the related posts, as it is not part of the main page, but
+    still related to the content we use a different container element than <article> as it is not part of the 
+     part main 
+     instead we use <aside> like sidebar
+     -->
+
+    <aside>
+      <h4>Related posts</h4>
+      <ul class="related">
+        <li>
+          <img 
+          src="img/related-1.jpg" 
+          alt="#" width="75px"> 
+         <a href="#">How to Learn Web Development
+
+         </a> 
+         <p class="related-author">by Jonas Schmedtmann</p> 
+        
+        </li>
+        <li>
+          <img src="img/related-2.jpg"
+           alt="#" width="75px">
+          <a href="#">The Unknown Powers of CSS
+
+          </a>
+          <p class="related-author">By Jim Dilon</p> </li>
+        <li>
+          <img 
+           src="img/related-3.jpg"
+           alt="#" 
+           width="75px">
+          <a 
+          href="#">
+          Why JavaScript is Awsome
+        </a> 
+        <p class="related-author">by Matilda</p> 
+      </li>
+      </ul>
+
+       
+    </aside>
+
+    <footer> <!-- this copy is called HTML entitiy and there
+      is loads of other available
+      in this footer because there is only one sentence we dont need 
+      another child element like <p>, however if contained more than that
+      I could use <p>
+      -->
+      <p id="copyright">Copy Right &copy;</p>
+      
+    </footer>
+  </body>
+</html>
+
+
+<!-- 
+1-Container elements will help give more structure to our HTML. 
+
+2- <strong> used for bold
+
+3- <em> Used for italic
+
+4- <a> anchor should alwaus have a href= link of the page.
+
+5- <a target="_blank"> will open the link in a new page. 
+
+6- image is self closing tag and shoud have a source like: <img src="">
+
+
+7- Img should also have alt="" attribute in case photo does not load.
+
+
+8- What is Semantic HTML: 
+
+9-Semantic element is the meaning behind that element
+10-not all elements are semantic
+11-for example <b> does not give any meaning but it still makes the word bold
+12-so it is important to know
+13-  for example <strong> means important
+14-<em> means emphasis 
+15- all these are semantic ==> they have a meaning and describe the content they contain
+16-Another example is we can use <div> instead of <nav> or <header> as div has no meaning 
+17-but in HTML we can use specific html that have meaning ==> Semantic HTML ==> attaching a certain meaning to a content. 
+18-We can use <div> which has no meaning and is generic to build an entire web page but we do not do that,
+  that is because we want to give website and its content a meaning, so search engine optimisation can work and goolge can understand
+  the content to analayize the content and weblage. it is important for accessibilities as well. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->

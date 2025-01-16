@@ -1,0 +1,220 @@
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: sans-serif;
+  color: #444;;
+}
+
+
+/* Because I want to select multiple places for the same color I would 
+select multiple instead of doing them one by one */
+
+h1,h2, h3 {
+  color: rgb(16, 152, 173);
+}
+
+
+
+
+h1 {
+  font: size 26px;
+  text-transform:uppercase;
+  font-style: italic;
+}
+  font-size: 26px;
+  font-family: ;
+  text-transform: uppercase;
+  font-style: italic;
+}
+h2 {
+  font-size: 40px;
+  font-family: sans-serif;
+}
+h3 {
+  font-size: 30px;
+  font-family: sans-serif;
+}
+h4 {
+  font-size: 20px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+p {
+  font-size: 22px;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+li {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+/* as you can see above is very repetitive, because 
+we are giving the same changes such as font-size, and font-family to 
+all of them, so why not do it once, so when we want to change it
+we do not have to go back and change them one by one, so I only put the font-family
+once instead of one by one*/
+
+/* another way of selecting is using decendant selector, which would be
+like using for example footer p {} in this case all the p elements within
+the footer container would be affected by that style this is called
+chooing a child elements (P) of a parent element (Footer) */
+
+/* another way is to do a nested styling, for example if I am writing header p {} but I have
+multuple headers this would mean all (p) elements would be affected.
+I can take this one higher by nesting them into their parent container.
+for example article header p, this would only target (p) that are under header that are under article only.*/
+
+/* Now would it not be better if we could name what we want to select for styling?
+this is where ID comes from.
+we can now give our elements an attribute called ID="name" which can be used
+to select when styling, <p ID="author"> in HTML
+
+so in CSS we can write it as follows ==> #author{}*/
+
+/*so instead of writing ==> article header p {font-style: italic;}
+we can write the following:*/
+
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+/* now instead of writing footer p {font-size: 20px;} we can write the following: */
+#copyright {
+  font-size: 16px;
+}
+
+/* another way of selecting is using a CLASS, the difference is you can only use 
+ID once, you cannot give the same ID name to multiple names 
+so if you want to use the same name multiple times you would have to use the CLASS
+
+So lets use  select the author names as a class using class="related-author".
+Remember (#) is used as an ID selector and (.) is used as a class selector, see the following:
+*/
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.related {
+  list-style: none;
+}
+
+/* why using CLASS is best practice?
+
+
+CLASS IS REUSABLE,meaning in the future it is easier to work with if we want to add
+more or change information or style on our website. 
+
+they are perferct for styling group of elements as they can be added to multiple elements
+
+an element can have more than one class, this means they can have more than one different style.
+
+classes are also used for JAVA scripts
+
+WHEN IS ID USED??
+
+1-is used to identify a single elements ==> it is unique 
+2- this means it is best to use it for unique items that have single locations ==> navigation bar
+3- ID has higher specificity over CLASS, meaning it will override class if ID selected.
+4-Good to be used as anchors to link to a specific location on the web,
+5-USE ID if you have a single element that stands out that needs unique styling such as main header
+or a specific secction that needs to be directly accessible via a URL (contact-section) using ID makes sense. 
+
+
+WHEN IS CLASS USED?
+1-Using website with several buttons that have the same design, but distributed thorughout different sections.
+2- this helps to maintain consistency and manage styles in a centralised way. 
+
+
+*/
+
+.main-header {
+  background: color #f7f7f7
+}
+
+
+aside{
+  background-color:#f7f7f7;
+  border: 5px solid;color: #1098ad;
+  color: #2a3c94;
+}
+
+
+/* I can do this border differently as the following so I can specifically target one side
+rather than do the shortened above. 
+
+ aside{
+  border-top: 5px solid
+  border-bottom: 5px solid
+  border-left: 5px solid
+  border-right: 5px solid
+
+} */
+
+/*  
+The bottom code will give a background color to the entire body, but when you use it 
+the related post will not change, it is because I specifically gave it a background color
+under aside this means the color chosen it is own parent element has priorty. 
+
+body {
+  background-color: blue;
+} 
+
+*/
+
+/*  so If i want to make the first Li elements for both ol and ul bold, i can give it a class
+and make the font-weight as bold. 
+
+Pseudo-class are used to target elements in a specific state or conditions that cannot be targeted
+with normal class selector alone. 
+
+1-these are like when something is hovered on, focus, active like a button.
+2-allows applying styles based on the positions of the elements, 1st child, 2nd child, nth child
+3-for dynamic styles such as disabled and checked and etc. 
+
+see the following for use in this as examples:
+
+ li:first-child{
+  font-weight:bold;
+}
+li:last-child {
+  font-style: italic;
+}
+li:nth-child(3) {
+  color: red;
+
+li:nth-child(odd) {
+color:red;
+}
+
+
+Misconception ==> if I write header p: first-child ==> this wont work if the first child
+under header is a different element such as img or anything else.
+for pseudoclass to work the first child element must be P to work in this case. 
+ */
+
+
+ /*  STYLING LINKS ==> 
+ 
+ 
+ 
+ 
+ */
+
+
+
+
+
+
+
+
+
+
+
+
