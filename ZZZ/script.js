@@ -135,7 +135,3 @@ cells.forEach((cell) => {
 });
 
 resetBtn.addEventListener("click", resetGame);
-
-function handleCellClick(e){
-  const = e.target.getAttribute("data-index")
-}
