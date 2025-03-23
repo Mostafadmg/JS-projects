@@ -1,0 +1,55 @@
+/* Step 1: Reset and Body Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #181818, #2f2f3d);
+  min-height: 100vh;
+  color: #fff;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+/* Step 2: Title */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  color: #0affff;
+}
+
+/* Step 3: Game Container */
+.game-container {
+  position: relative;
+  width: 480px;
+  height: 320px;
+  border: 2px solid #0affff;
+  box-shadow: 0 0 20px #0affff;
+  margin-bottom: 20px;
+}
+
+/* Step 4: Info Panel */
+.info-panel {
+  display: flex;
+  gap: 20px;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* Step 5: Score and Lives Text */
+.info-panel p {
+  margin: 0;
+}
+
+/* Optional: neon color for the text */
+#score,
+#lives {
+  color: #0affff;
+  font-weight: bold;
+}

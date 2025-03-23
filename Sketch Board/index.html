@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SketchPad | Interactive Drawing Board</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1><span class="highlight">Sketch</span>Pad</h1>
+        <p class="subtitle">Create beautiful drawings with ease</p>
+      </header>
+
+      <div class="toolbar">
+        <div class="tool-group">
+          <div class="brush-size">
+            <label for="brush-size">Brush Size</label>
+            <input type="range" id="brush-size" min="1" max="50" value="10" />
+            <span id="size-display">10px</span>
+          </div>
+        </div>
+
+        <div class="tool-group colors">
+          <h3>Colors</h3>
+          <div class="color-palette">
+            <div
+              class="color-option active"
+              data-color="#000000"
+              style="background-color: #000000"
+            ></div>
+            <div
+              class="color-option"
+              data-color="#FF6B6B"
+              style="background-color: #ff6b6b"
+            ></div>
+            <div
+              class="color-option"
+              data-color="#4ECDC4"
+              style="background-color: #4ecdc4"
+            ></div>
+            <div
+              class="color-option"
+              data-color="#FFE66D"
+              style="background-color: #ffe66d"
+            ></div>
+            <div
+              class="color-option"
+              data-color="#6A0572"
+              style="background-color: #6a0572"
+            ></div>
+            <div
+              class="color-option"
+              data-color="#1A535C"
+              style="background-color: #1a535c"
+            ></div>
+          </div>
+
+          <div class="custom-color">
+            <label for="color-picker">Custom:</label>
+            <input type="color" id="color-picker" value="#000000" />
+          </div>
+        </div>
+
+        <div class="tool-group">
+          <div class="action-buttons">
+            <button id="clear-btn" class="btn danger">
+              <i class="fas fa-trash-alt"></i> Clear All
+            </button>
+            <button id="eraser-btn" class="btn">
+              <i class="fas fa-eraser"></i> Eraser
+            </button>
+            <button id="save-btn" class="btn primary">
+              <i class="fas fa-save"></i> Save
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="canvas-container">
+        <canvas id="drawing-board"></canvas>
+      </div>
+
+      <div class="message" id="message">
+        <div class="message-content">
+          <i class="fas fa-check-circle"></i>
+          <p id="message-text">Drawing saved successfully!</p>
+        </div>
+      </div>
+
+      <div class="tips">
+        <h3><i class="fas fa-lightbulb"></i> Tips</h3>
+        <ul>
+          <li>Click and drag to draw</li>
+          <li>Adjust the brush size with the slider</li>
+          <li>Use the eraser to remove mistakes</li>
+          <li>Save your masterpiece to your device</li>
+        </ul>
+      </div>
+
+      <div class="gallery" id="gallery">
+        <h3>Your Recent Sketches</h3>
+        <div class="gallery-container" id="gallery-items">
+          <p class="empty-gallery">Your saved sketches will appear here</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        Created with <i class="fas fa-heart"></i> by You | <span id="current-year"></span>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

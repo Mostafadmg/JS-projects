@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mood Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <header>
+        <h1>Mood Tracker</h1>
+        <p class="date" id="current-date">Loading date...</p>
+      </header>
+
+      <div class="mood-selector">
+        <h2>How are you feeling today?</h2>
+        <div class="mood-options">
+          <div class="mood-option" data-mood="great">
+            <div class="mood-emoji">😄</div>
+            <span>Great</span>
+          </div>
+          <div class="mood-option" data-mood="good">
+            <div class="mood-emoji">🙂</div>
+            <span>Good</span>
+          </div>
+          <div class="mood-option" data-mood="okay">
+            <div class="mood-emoji">😐</div>
+            <span>Okay</span>
+          </div>
+          <div class="mood-option" data-mood="bad">
+            <div class="mood-emoji">😞</div>
+            <span>Bad</span>
+          </div>
+          <div class="mood-option" data-mood="awful">
+            <div class="mood-emoji">😢</div>
+            <span>Awful</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="notes-section">
+        <h2>Add a note</h2>
+        <textarea id="mood-notes" placeholder="What's on your mind today?"></textarea>
+        <button id="save-entry">Save Entry</button>
+      </div>
+
+      <div class="history-section">
+        <h2>Your Mood History</h2>
+        <div class="history-container" id="history-container">
+          <!-- Mood history will be added here dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

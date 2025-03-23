@@ -1,0 +1,36 @@
+/* Basic reset and background styling */
+body {
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
+  /* Use flex to center everything horizontally and vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+/* The white part of the eye */
+.eye {
+  position: relative; /* So the pupil can be placed inside it */
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Use flex for easy centering of the pupil */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The black pupil that rotates within the eye */
+.pupil {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: black;
+}

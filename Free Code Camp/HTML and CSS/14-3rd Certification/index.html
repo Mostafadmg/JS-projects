@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>CSS Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction"> Introduction</a></li>
+        <li><a class="nav-link" href="#What_You_Should_Already_Know"> What You Should Already Know</a></li>
+        <li><a class="nav-link" href="#Key_Concepts">Key Concepts</a></li>
+        <li><a class="nav-link" href="#Properties_And_Values">Properties and Values</a></li>
+        <li><a class="nav-link" href="#CSS_Syntax">CSS Syntax</a></li>
+        <li><a class="nav-link" href="#Type_of_CSS">Type of CSS</a></li>
+        <li><a class="nav-link" href="#Layout">Layout</a></li>
+        <li><a class="nav-link" href="#CSS_Units">CSS Units</a></li>
+        <li><a class="nav-link" href="#Colors">Colors</a></li>
+        <li><a class="nav-link" href="#CSS_Box_Model">CSS Box Model</a></li>
+        <li><a class="nav-link" href="#Positioning">Positioning</a></li>
+        <li><a class="nav-link" href="#Responsive_Design">Responsive Design</a></li>
+        <li><a class="nav-link" href="#Advanced_CSS">Advanced CSS</a></li>
+        <li><a class="nav-link" href="#References">References</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          This guide assumes you have the
+              following basic background:
+          <ul class="bulletpoints">
+            <li>
+              A general understanding of the Internet and the World Wide Web
+              (WWW).
+            </li>
+            <li>A basic understanding of HTML.</li>
+            <li>Some familiarity with basic web development concepts.</li>
+          </ul>
+          <p>
+            CSS and HTML CSS (Cascading Style Sheets) is used to describe the
+            presentation of a document written in HTML or XML. While HTML
+            defines the content and structure of a webpage, CSS defines how that
+            content should look, such as its layout, colors, fonts, and
+            positioning. CSS allows you to separate content from design, making
+            your websites more accessible and easier to maintain. CSS is
+            primarily used for styling web pages and is one of the cornerstones
+            of web development along with HTML and JavaScript. It is implemented
+            using selectors and properties that affect how the content of an
+            HTML document is displayed in a web browser.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="What_You_Should_Already_Know">
+        <header>What You Should Already Know</header>
+        <article>
+          <ul class="bulletpoints">
+            <li>
+              Basic understanding of how websites work, including HTML and how
+              it structures content.
+            </li>
+            <li>Familiarity with the Document Object Model (DOM).</li>
+            <li>
+              An introductory understanding of JavaScript (optional, but useful
+              when interacting with CSS dynamically).
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Key_Concepts">
+        <header>Key Concepts</header>
+        <article>
+          <h4>Selectors :</h4>
+          CSS selectors are used to target HTML elements in order to apply
+              styles to them. There are various types of selectors, including:
+          <ul class="bulletpoints">
+            <li><strong>Universal Selector (*):</strong> Targets all elements.</li>
+            <li><strong>Type Selector (div):</strong> Targets all elements of a specific type, like.</li>
+            <li><strong>Class Selector (.classname): </strong>Targets all elements with a specific class.</li>
+            <li><strong>ID Selector (#id):</strong> Targets a specific element with a given ID.</li>
+            <li><strong>Attribute Selector ([type="text"]):</strong> Targets elements with specific attributes.</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Properties_And_Values">
+        <header>Properties And Values</header>
+        <article>
+          <p>CSS works by applying properties to selected elements. Each property defines a style or behavior, and the value specifies the particular style.</p>
+          <p>Example:</p>
+          <code>body {
+            color: blue;
+            background-color: lightgray;
+    }</code>
+          <p>Here, color and background-color are properties, and blue and lightgray are the values.
+
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="CSS_Syntax">
+        <header>CSS Syntax</header>
+        <article>
+          <p>A typical CSS rule set consists of a selector and a declaration block:</p>
+          <code>selector {
+            property: value;}
+          </code>
+          <p>For example:</p>
+          <code>p {
+            color: red;
+            font-size: 14px;
+          }</code>
+          <p>Here, p is the selector, and inside the curly braces {}, there are two property-value pairs.</p>
+        </article>
+        <section class="main-section" id="Type_of_CSS">
+          <header>Type of CSS</header>
+          <article>
+            CSS can be applied to a document in three primary ways:
+            <ol class="bulletpoints">
+              <li><strong>Inline CSS:</strong> Directly within HTML elements using the style attribute.</li>
+              <code><strong>&lt;p style="color: </strong>red;"&gt;This text is red.</code>
+              <li><strong>Internal CSS: </strong>Within the &lt;style&gt; element in the &lt;head&gt; section of the HTML document.</li>
+              <code>&lt;style&gt;
+                p {
+                  color: red;
+                }
+              </style></code>
+              <li><strong>External CSS:</strong> In a separate .css file, linked to the HTML document.</li>
+              <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code>
+            </ol>
+
+          </article>
+
+      </section>
+      <section class="main-section" id="Layout">
+        <header>Layout</header>
+        <article>CSS offers multiple techniques to create various layouts:
+          <h4>Block Layout</h4>
+          <p>By default, elements like &lt;div&gt; are block-level elements, meaning they take up the full width available and stack vertically.</p>
+          <code>div {
+            width: 100%;
+            height: 100px;
+            background-color: lightblue;
+          }</code>
+          <h4>Inline Layout</h4>
+          <p>Inline elements, such as &lt;span&gt;, take up only as much width as needed and do not break the flow of content.</p>
+          <code>span {
+            color: blue;
+          }</code>
+          <h4>Flexbox</h4>
+          <p>Flexbox is a powerful layout model that allows elements within a container to be dynamically arranged based on certain rules.</p>
+          <code>.container {
+            display: flex;
+            justify-content: space-between;
+          }</code>
+          <h4>Grid</h4>
+          <p>CSS Grid Layout is a two-dimensional layout system that allows you to create complex grid-based designs easily.</p>
+          <code>.container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+          }</code>
+
+        </article>
+      </section>
+      <section class="main-section" id="CSS_Units">
+        <header>CSS Units</header>
+        <article>CSS support different types of units for defining lengths, such as:
+          <ul class="bulletpoints">
+            <li><strong>Pixels (px):</strong> A fixed unit of measurement.</li>
+            <li><strong>Relative units (em, rem):</strong> Relative to the font size of an element or root element.</li>
+            <li><strong>Percentage (%):</strong> Relative to the parent element’s size.</li>
+            <li><strong>Viewport units (vw, vh):advanced</strong> Relative to the size of the viewport.</li>
+
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Colors">
+        <header>Colors</header>
+        <article>Colors in CSS can be defined using:
+          <ul class="bulletpoints">
+            <li><strong>Named Colors: </strong>red, green, blue, etc.</li>
+            <li><strong>Hexadecimal:</strong> #ff0000 (red).</li>
+            <li><strong>RGB:</strong> rgb(255, 0, 0) (red).</li>
+            <li><strong>RGBA:</strong> rgba(255, 0, 0, 0.5) (red with 50% opacity).</li>
+            <li><strong>HSL:</strong> hsl(0, 100%, 50%) (red).</li>
+            <li><strong>HSLA:</strong> hsla(0, 100%, 50%, 0.5) (red with 50% opacity)</li>
+
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="CSS_Box_Model">
+        <header>CSS Box Model</header>
+        <article>The box model is the fundamental concept that determines how the elements on a page are sized and spaced.
+          <ul class="bulletpoints">
+            <li><strong>Content: </strong>The actual content of the box (text, images, etc.).</li>
+            <li><strong>Padding:</strong> The space between the content and the border.</li>
+            <li><strong>Border: </strong>The border surrounding the padding (optional).</li>
+            <li><strong>Margin: </strong>The space outside the border.</li>
+            <code>.box {
+              width: 200px;
+              padding: 10px;
+              border: 2px solid black;
+              margin: 20px;
+            }</code>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Positioning">
+        <header>Positioning</header>
+        <article>CSS offers various positioning options:
+          <ul class="bulletpoints">
+            <li><strong>Static (default):</strong> Elements flow naturally within the document.</li>
+            <li><strong>Relative:</strong> Elements are positioned relative to their normal position.</li>
+            <li><strong>Absolute:</strong>Elements are positioned relative to their nearest positioned ancestor.</li>
+            <li><strong>Fixed:</strong>Elements are fixed relative to the viewport.</li>
+            <li><strong>Sticky:</strong> Elements toggle between relative and fixed, depending on scrolling.</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Responsive_Design">
+        <header>Responsive Design</header>
+        <article>Responsive design ensures that a website looks good on all devices, from mobile phones to desktops. Key techniques include:
+          <ul class="bulletpoints">
+            <li><strong>Media Queries:</strong> Apply styles based on the viewport size or other device characteristics.</li>
+            <code>@media (max-width: 600px) {
+              .container {
+                display: block;
+              }
+            }</code>
+            <li><strong>Fluid Layouts:</strong> Use percentages and relative units for widths to create flexible layouts.</li>
+            <li><strong>Viewport Meta Tag:</strong> Ensure proper scaling on mobile devices.</li>
+          </ul>
+
+        </article>
+      </section>
+      <section class="main-section" id="Advanced_CSS">
+        <header>Advanced CSS</header>
+        <article>
+          <h4>Transitions</h4>
+          <p>CSS transitions allow you to change property values smoothly over a given duration.</p>
+          <code>.box {
+            transition: background-color 0.5s ease;
+          }
+
+          .box:hover {
+            background-color: blue;
+          }</code>
+          <h4>Animations</h4>
+          <p>CSS animations allow you to define keyframes to animate elements.</p>
+          <code>@keyframes slide {
+            from {
+              transform: translateX(0);
+            }
+            to {
+              transform: translateX(100px);
+            }
+          }
+
+          .box {
+            animation: slide 2s infinite;
+          }</code>
+        </article>
+      </section>
+      <section class="main-section" id="References">
+        <header>References</header>
+        <article>
+          <p>Reference All the documentation in this page is adapted from <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a> Web Docs.</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

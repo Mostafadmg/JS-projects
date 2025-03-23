@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Snake Game</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="game-header">
+        <h1>Snake <span class="highlight">Game</span></h1>
+        <div class="score-container">
+          <div class="score-box">
+            <span class="score-label">Score:</span>
+            <span id="score">0</span>
+          </div>
+          <div class="score-box">
+            <span class="score-label">High Score:</span>
+            <span id="high-score">0</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-area-container">
+        <div id="start-screen" class="screen">
+          <h2>Ready to Play?</h2>
+          <div class="game-instructions">
+            <p>Use arrow keys or WASD to move the snake</p>
+            <p>Collect food to grow longer</p>
+            <p>Don't hit the walls or yourself!</p>
+          </div>
+          <div class="difficulty-selector">
+            <span>Difficulty:</span>
+            <div class="difficulty-buttons">
+              <button class="difficulty-btn" data-speed="slow">Easy</button>
+              <button class="difficulty-btn active" data-speed="medium">Medium</button>
+              <button class="difficulty-btn" data-speed="fast">Hard</button>
+            </div>
+          </div>
+          <button id="start-button" class="action-button">
+            <i class="fas fa-play"></i> Start Game
+          </button>
+        </div>
+
+        <div id="game-over-screen" class="screen hidden">
+          <h2>Game Over!</h2>
+          <div class="final-score">
+            <p>Your score: <span id="final-score">0</span></p>
+            <p>High score: <span id="final-high-score">0</span></p>
+          </div>
+          <button id="restart-button" class="action-button">
+            <i class="fas fa-redo"></i> Play Again
+          </button>
+        </div>
+
+        <canvas id="game-canvas"></canvas>
+
+        <div class="mobile-controls">
+          <button id="up-btn" class="mobile-btn">
+            <i class="fas fa-chevron-up"></i>
+          </button>
+          <div class="mobile-controls-middle">
+            <button id="left-btn" class="mobile-btn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="right-btn" class="mobile-btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <button id="down-btn" class="mobile-btn">
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="game-footer">
+        <div class="settings">
+          <button id="settings-button" class="icon-button">
+            <i class="fas fa-cog"></i>
+          </button>
+        </div>
+        <div class="controls-info">
+          <p>Desktop: Arrow Keys or WASD</p>
+          <p>Mobile: Touch Controls</p>
+        </div>
+        <div class="audio-control">
+          <button id="audio-button" class="icon-button">
+            <i class="fas fa-volume-up"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="settings-modal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Settings</h2>
+          <button id="close-settings" class="close-button">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="setting-item">
+            <span>Game Theme</span>
+            <div class="theme-selector">
+              <button class="theme-btn active" data-theme="default">Classic</button>
+              <button class="theme-btn" data-theme="neon">Neon</button>
+              <button class="theme-btn" data-theme="retro">Retro</button>
+            </div>
+          </div>
+          <div class="setting-item">
+            <span>Grid Lines</span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="grid-toggle" checked />
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="setting-item">
+            <span>Snake Speed</span>
+            <div class="slider-container">
+              <input type="range" id="speed-slider" min="1" max="3" step="1" value="2" />
+              <div class="slider-labels">
+                <span>Slow</span>
+                <span>Fast</span>
+              </div>
+            </div>
+          </div>
+          <div class="setting-item">
+            <span>Special Food</span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="special-food-toggle" checked />
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
