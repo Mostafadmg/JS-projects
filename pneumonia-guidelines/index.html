@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CKS Pneumonia Prescribing Guidelines</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { text-align: center; }
+    label { font-weight: bold; }
+    select { margin-left: 10px; }
+    .section { display: none; margin-top: 20px; }
+    .section.active { display: block; }
+    ul { list-style: disc; margin-left: 20px; }
+    .disclaimer { font-size: 0.9rem; color: #555; margin-top: 30px; }
+  </style>
+</head>
+<body>
+  <h1>CKS Pneumonia Prescribing Guidelines</h1>
+  <div>
+    <label for="severity">Select severity:</label>
+    <select id="severity">
+      <option value="" disabled selected>Select...</option>
+      <option value="low">Low severity (CAP)</option>
+      <option value="moderate">Moderate severity (CAP)</option>
+      <option value="severe">Severe or requiring hospitalisation</option>
+    </select>
+  </div>
+
+  <div id="low" class="section">
+    <h2>Low Severity Community‑Acquired Pneumonia</h2>
+    <ul>
+      <li>First-line: amoxicillin 500&nbsp;mg three times daily for 5&nbsp;days.</li>
+      <li>If penicillin allergy or atypical features, use doxycycline 200&nbsp;mg on day&nbsp;1, then 100&nbsp;mg daily for 5&nbsp;days, or clarithromycin 500&nbsp;mg twice daily for 5&nbsp;days.</li>
+    </ul>
+  </div>
+
+  <div id="moderate" class="section">
+    <h2>Moderate Severity Community‑Acquired Pneumonia</h2>
+    <ul>
+      <li>First-line: amoxicillin 500&nbsp;mg three times daily plus clarithromycin 500&nbsp;mg twice daily, both for 5&nbsp;days.</li>
+      <li>If penicillin allergy, use doxycycline 200&nbsp;mg on day&nbsp;1, then 100&nbsp;mg daily for 5&nbsp;days.</li>
+    </ul>
+  </div>
+
+  <div id="severe" class="section">
+    <h2>Severe or Requiring Hospitalisation</h2>
+    <ul>
+      <li>Follow local guidelines and consider hospital referral.</li>
+    </ul>
+  </div>
+
+  <p class="disclaimer">These summaries are adapted from NICE Clinical Knowledge Summaries (CKS). They are for educational purposes and not a substitute for professional medical advice.</p>
+
+  <script>
+    const select = document.getElementById('severity');
+    select.addEventListener('change', () => {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      const chosen = document.getElementById(select.value);
+      if (chosen) {
+        chosen.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>
